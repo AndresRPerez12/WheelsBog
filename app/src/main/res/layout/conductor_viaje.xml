@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/suplay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/lay11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oferta de viaje con: "
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/namedriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textSize="20sp"
+                android:textColor="@color/black">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay12"
+            android:layout_below="@+id/lay11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Te cobrará: $"
+                android:textSize="20sp"
+                android:textColor="@color/black">
+            </TextView>
+            <TextView
+                android:id="@+id/moneydriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="money"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay13"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cupos "
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/pacupo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="###"
+                android:textSize="20sp"
+                android:textColor="@color/black">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/suplay1"
+        android:id="@+id/suplay2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/total"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/suplay3"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/driverlay">
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Punto de encuentro para el viaje:"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+            <!--Espacio mapa 1 -->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layhora"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hora de encuentro: "
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HH:MM "
+                    android:id="@+id/h_encuentro"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Punto de destino para finalizar el viaje:"
+                android:textSize="20sp"
+                android:textColor="@color/black"></TextView>
+            <!-- Espacio mapa destino -->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layhorallegada"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hora de llegada: "
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HH:MM "
+                    android:id="@+id/h_llegada"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <ListView
+                android:layout_marginTop="20sp"
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+            </ListView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

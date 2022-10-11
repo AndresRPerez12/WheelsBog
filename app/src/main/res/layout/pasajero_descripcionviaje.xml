@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:id="@+id/suplay1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:padding="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:backgroundTint="@color/gray">
+        <LinearLayout
+            android:id="@+id/lay11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tu viaje con: "
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+            <TextView
+                android:id="@+id/namedriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textSize="20sp"
+                android:textColor="@color/black">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lay12"
+            android:layout_below="@+id/lay11"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Te cobrará: $"
+                android:textSize="20sp"
+                android:textColor="@color/black">
+            </TextView>
+            <TextView
+                android:id="@+id/moneydriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="money"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/suplay1"
+        android:id="@+id/suplay2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/total"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/suplay3"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/driverlay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/suplay1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/photoPerfilconductor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/perfil"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <LinearLayout
+                        android:id="@+id/slay22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/suplay1"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lay21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Conductor: "
+                                android:textColor="@color/black"
+                                android:textSize="20dp"></TextView>
+
+                            <TextView
+                                android:id="@+id/namedriver2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="name"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"></TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lay22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/lay1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Placa: "
+                                android:textColor="@color/black"
+                                android:textSize="20sp"></TextView>
+
+                            <TextView
+                                android:id="@+id/placa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="BBB000"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"></TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lay23"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/lay1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="celular: "
+                                android:textColor="@color/black"
+                                android:textSize="20sp"></TextView>
+
+                            <TextView
+                                android:id="@+id/driver_cel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="30000000"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/driverlay">
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Punto de encuentro para el viaje:"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+            <!--Espacio mapa 1 -->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layhora"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hora de encuentro: "
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HH:MM "
+                    android:id="@+id/h_encuentro"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Punto de destino para finalizar el viaje:"
+                android:textSize="20sp"
+                android:textColor="@color/black"></TextView>
+            <!-- Espacio mapa destino -->
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layhorallegada"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hora de llegada: "
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="HH:MM "
+                    android:id="@+id/h_llegada"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
