@@ -17,7 +17,9 @@ public class UserService {
 
     public List<User> getAllUsers() { // returns a list with all Users in the database
         try{
-            return userRepository.findAll();
+            List<User> users = userRepository.findAll();
+            removePasswordFromObjectList(users);
+            return users;
         }catch( Exception e ){
             System.out.println("Exception:" + e);
             throw e;
@@ -27,7 +29,9 @@ public class UserService {
 
     public User getUserById( Long id ) { // returns the User with the requested ID or an exception if it does not exist
         try{
-            return userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
+            User user = userRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
+            removePasswordFromObject(user);
+            return user;
         }catch( Exception e ){
             System.out.println("Exception:" + e);
             throw e;
@@ -57,5 +61,14 @@ public class UserService {
 
     public User findByEmail( String email ){
         return userRepository.findByEmail( email );
+    }
+
+    private void removePasswordFromObject(User user){
+        user.setPassword("********");
+    }
+
+    private void removePasswordFromObjectList(List<User> users){
+        for(User user : users)
+            removePasswordFromObject(user);
     }
 }
