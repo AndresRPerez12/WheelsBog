@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="andre (generated)" id="1665856502445-1">
+        <createTable tableName="location">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="latitude" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-2">
+        <createTable tableName="trip">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="departure_time" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="arrival_time" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="passenger_capacity" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="0" name="trip_completed" type="TINYINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_driver" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_origin" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_destination" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-3">
+        <createTable tableName="trip_has_passengers">
+            <column name="user_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trip_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-4">
+        <createTable tableName="user">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(45)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-5">
+        <addPrimaryKey columnNames="user_id, trip_id" constraintName="PRIMARY" tableName="trip_has_passengers"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-6">
+        <addUniqueConstraint columnNames="email" constraintName="email_UNIQUE" tableName="user"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-7">
+        <createIndex indexName="fk_trip_location1_idx" tableName="trip">
+            <column name="id_origin"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-8">
+        <createIndex indexName="fk_trip_location2_idx" tableName="trip">
+            <column name="id_destination"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-9">
+        <createIndex indexName="fk_trip_user_idx" tableName="trip">
+            <column name="id_driver"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-10">
+        <createIndex indexName="fk_user_has_trip_trip1_idx" tableName="trip_has_passengers">
+            <column name="trip_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-11">
+        <createIndex indexName="fk_user_has_trip_user1_idx" tableName="trip_has_passengers">
+            <column name="user_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-12">
+        <addForeignKeyConstraint baseColumnNames="id_origin" baseTableName="trip" constraintName="fk_trip_location1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="location"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-13">
+        <addForeignKeyConstraint baseColumnNames="id_destination" baseTableName="trip" constraintName="fk_trip_location2" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="location"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-14">
+        <addForeignKeyConstraint baseColumnNames="id_driver" baseTableName="trip" constraintName="fk_trip_user" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="user"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-15">
+        <addForeignKeyConstraint baseColumnNames="trip_id" baseTableName="trip_has_passengers" constraintName="fk_user_has_trip_trip1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="trip"/>
+    </changeSet>
+    <changeSet author="andre (generated)" id="1665856502445-16">
+        <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="trip_has_passengers" constraintName="fk_user_has_trip_user1" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="id" referencedTableName="user"/>
+    </changeSet>
+</databaseChangeLog>
