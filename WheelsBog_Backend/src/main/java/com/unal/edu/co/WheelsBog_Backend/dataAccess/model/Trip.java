@@ -34,14 +34,16 @@ public class Trip {
     private Long passengerCapacity;
 
     @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "trip_has_passengers",
+            joinColumns = @JoinColumn(name = "trip_id"),
+            inverseJoinColumns = { @JoinColumn(name = "user_id") } )
     private List<User> passengers;
 
     @Column(name = "trip_completed")
     private Boolean tripCompleted = false;
 
-    public Long getId() {
-        return id;
-    }
+    public Long getId() { return id; }
 
     public void setId(Long id) {
         this.id = id;
