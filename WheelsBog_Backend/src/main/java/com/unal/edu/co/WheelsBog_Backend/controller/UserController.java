@@ -1,4 +1,4 @@
-package com.unal.edu.co.WheelsBog_Backend.dataAccess.controller;
+package com.unal.edu.co.WheelsBog_Backend.controller;
 
 import com.unal.edu.co.WheelsBog_Backend.dataAccess.model.User;
 import com.unal.edu.co.WheelsBog_Backend.service.UserService;
