@@ -33,6 +33,13 @@ public class UserController {
         return userService.createUser(user);
     }
 
+    //get location by id
+    @GetMapping("/user/{id}")
+    public User getUserById(@PathVariable(value = "id") Long userId, HttpServletRequest request ) {
+        //return the corresponding service logical function
+        return userService.getUserById(userId);
+    }
+
     //Delete http request for user by ID
     @DeleteMapping("delete/user/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable(value = "id") Long userId, HttpServletRequest request) {
