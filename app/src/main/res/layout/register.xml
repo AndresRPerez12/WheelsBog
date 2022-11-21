@@ -14,7 +14,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/Wheels" />
+        app:srcCompat="@drawable/wheels" />
 
     <EditText
         android:id="@+id/mailRegister"
@@ -36,25 +36,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_gray"
         android:text="Registrarse"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/photoButton" />
-
-    <Button
-        android:id="@+id/photoButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/round_gray"
-        android:text="Sube una foto tuya"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -66,15 +51,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="32dp"
         android:ems="10"
+        android:hint="Ingresa tu contraseña"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneRegister"
-        android:hint="Ingresa tu contraseña"/>
+        app:layout_constraintTop_toBottomOf="@+id/phoneRegister" />
 
     <EditText
         android:id="@+id/phoneRegister"

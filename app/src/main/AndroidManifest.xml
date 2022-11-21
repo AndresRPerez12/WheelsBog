@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="CoarseFineLocation" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,10 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WheelsBog"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +28,13 @@
             </intent-filter>
 
             <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyCGOuDlV8R5f5owk9Ri_a0PTZui-jDhwv4" />
         </activity>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

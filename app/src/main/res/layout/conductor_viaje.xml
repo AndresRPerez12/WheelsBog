@@ -117,7 +117,13 @@
                 android:text="Punto de encuentro para el viaje:"
                 android:textSize="20sp"
                 android:textColor="@color/black"/>
-            <!--Espacio mapa 1 -->
+            <fragment
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map1"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
@@ -140,13 +146,22 @@
                     android:textColor="@color/black"/>
             </LinearLayout>
             <TextView
+                android:layout_below="@+id/layhora"
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Punto de destino para finalizar el viaje:"
                 android:textSize="20sp"
+                android:id="@+id/puntofinal"
                 android:textColor="@color/black"></TextView>
-            <!-- Espacio mapa destino -->
+            <fragment
+                xmlns:map="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map2"
+                android:layout_below="@+id/puntofinal"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
