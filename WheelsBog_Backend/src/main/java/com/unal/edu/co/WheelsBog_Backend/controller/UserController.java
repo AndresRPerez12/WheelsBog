@@ -40,6 +40,13 @@ public class UserController {
         return userService.getUserById(userId);
     }
 
+    //get location by id
+    @GetMapping("/user/email/{email}")
+    public User getUserByEmail(@PathVariable(value = "email") String email, HttpServletRequest request ) {
+        //return the corresponding service logical function
+        return userService.findByEmail(email);
+    }
+
     //Delete http request for user by ID
     @DeleteMapping("delete/user/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable(value = "id") Long userId, HttpServletRequest request) {

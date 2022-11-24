@@ -58,7 +58,15 @@ public class UserService {
     }
 
     public User findByEmail( String email ){
-        return userRepository.findByEmail( email );
+        try {
+            User user = userRepository.findByEmail(email);
+            if(user == null)
+                throw new ResourceNotFoundException("User", "email", email);
+            return user;
+        }catch( Exception e ){
+            System.out.println("Exception:" + e);
+            throw e;
+        }
     }
 
 }
