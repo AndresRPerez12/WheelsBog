@@ -48,4 +48,11 @@ public class TripController {
         //Check deletion
         return ResponseEntity.ok().build();
     }
+
+    //Put http request for adding passenger
+    @PutMapping("/trip/add/{tripid}/{userid}")
+    public Trip addPassenger(@PathVariable(value = "tripid") Long tripId, @PathVariable(value = "userid") Long userId,
+                             HttpServletRequest request) {
+        return tripService.addPassenger(tripId,userId);
+    }
 }
