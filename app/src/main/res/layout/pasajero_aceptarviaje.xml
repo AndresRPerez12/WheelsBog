@@ -52,7 +52,7 @@
                 android:id="@+id/moneydriver"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="money"
+                android:text="2500"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 >
@@ -109,16 +109,6 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/photoPerfilconductor"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/perfil"
-                        tools:srcCompat="@tools:sample/avatars" />
-
                     <LinearLayout
                         android:id="@+id/slay22"
                         android:layout_width="wrap_content"
@@ -128,28 +118,7 @@
                         android:gravity="center_vertical"
                         android:orientation="vertical">
 
-                        <LinearLayout
-                            android:id="@+id/lay21"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
 
-                            <TextView
-
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Conductor: "
-                                android:textColor="@color/black"
-                                android:textSize="20dp"></TextView>
-
-                            <TextView
-                                android:id="@+id/namedriver2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="name"
-                                android:textColor="@color/black"
-                                android:textSize="20sp"></TextView>
-                        </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/lay22"
@@ -158,44 +127,10 @@
                             android:layout_below="@+id/lay1"
                             android:orientation="horizontal">
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Placa: "
-                                android:textColor="@color/black"
-                                android:textSize="20sp"></TextView>
 
-                            <TextView
-                                android:id="@+id/placa"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="BBB000"
-                                android:textColor="@color/black"
-                                android:textSize="20sp"></TextView>
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:id="@+id/lay23"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_below="@+id/lay1"
-                            android:orientation="horizontal">
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="celular: "
-                                android:textColor="@color/black"
-                                android:textSize="20sp"></TextView>
-
-                            <TextView
-                                android:id="@+id/driver_cel"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="30000000"
-                                android:textColor="@color/black"
-                                android:textSize="20sp"></TextView>
-                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -217,13 +152,12 @@
                 android:textSize="20sp"
                 android:textColor="@color/black"/>
             <fragment
-                xmlns:map="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/map1"
-                android:layout_below="@+id/puntofinal"
+                android:id="@+id/map3"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="200dp"
+                tools:context=".PasajeroAceptarActivity"/>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
@@ -245,21 +179,7 @@
                     android:textSize="20sp"
                     android:textColor="@color/black"/>
             </LinearLayout>
-            <TextView
-                android:layout_marginTop="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Punto de destino para finalizar el viaje:"
-                android:textSize="20sp"
-                android:textColor="@color/black"></TextView>
-            <fragment
-                xmlns:map="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/map2"
-                android:layout_below="@+id/puntofinal"
-                android:name="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
@@ -288,6 +208,7 @@
                 android:layout_height="wrap_content"
                 android:text="Aceptar viaje"
                 android:gravity="center"
+                android:id="@+id/aceptviaje"
                 android:background="@drawable/round_gray"></Button>
 
 

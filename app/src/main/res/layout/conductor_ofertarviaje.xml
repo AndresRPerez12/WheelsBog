@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:text="Selecciona el destino al qué iras hoy:"
+            android:text="Selecciona el destino del que saldras hoy:"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="25dp" />
@@ -35,12 +35,12 @@
         android:layout_marginRight="32dp">
 
         <fragment
-            xmlns:map="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/map1"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="200dp"
+            tools:context=".OfertarviajeActivity"/>
     </LinearLayout>
     <LinearLayout
         android:id="@+id/layout3"
@@ -66,15 +66,15 @@
             app:layout_constraintTop_toBottomOf="@+id/hour"/>
 
         <EditText
-            android:id="@+id/money"
+            android:id="@+id/horallegada"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:ems="10"
-            android:hint="Dinero que cobraras al pasajero"
-            android:inputType="number" />
+
+            android:hint="Hora que llegaras a la universidad:"
+             />
 
         <EditText
             android:id="@+id/hour"
@@ -83,8 +83,6 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="32dp"
-            android:ems="10"
-            android:inputType="number"
             android:hint="Hora a la que saldras"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -103,7 +101,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hour"/>
+            app:layout_constraintTop_toBottomOf="@+id/hours"/>
+
+        <Button
+            android:id="@+id/createtrip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="Crear viaje"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hour"
+            android:background="@drawable/round_gray"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 </RelativeLayout>

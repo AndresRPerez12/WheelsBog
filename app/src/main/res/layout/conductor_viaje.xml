@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Te cobrará: $"
+                android:text="Cobraras: $"
                 android:textSize="20sp"
                 android:textColor="@color/black">
             </TextView>
@@ -52,7 +52,7 @@
                 android:id="@+id/moneydriver"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="money"
+                android:text="2500 por persona"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 >
@@ -80,9 +80,23 @@
                 android:textSize="20sp"
                 android:textColor="@color/black">
             </TextView>
+
         </LinearLayout>
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:text="Actualizar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mPass"
+            android:background="@drawable/round_gray"
+            android:textColor="@color/black"/>
     </LinearLayout>
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/suplay1"
@@ -118,12 +132,12 @@
                 android:textSize="20sp"
                 android:textColor="@color/black"/>
             <fragment
-                xmlns:map="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/map1"
+                android:id="@+id/map4"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="200dp"
+                tools:context=".ConductorViaje"/>
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
@@ -145,23 +159,7 @@
                     android:textSize="20sp"
                     android:textColor="@color/black"/>
             </LinearLayout>
-            <TextView
-                android:layout_below="@+id/layhora"
-                android:layout_marginTop="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Punto de destino para finalizar el viaje:"
-                android:textSize="20sp"
-                android:id="@+id/puntofinal"
-                android:textColor="@color/black"></TextView>
-            <fragment
-                xmlns:map="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:id="@+id/map2"
-                android:layout_below="@+id/puntofinal"
-                android:name="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="wrap_content"
@@ -186,7 +184,7 @@
 
             <ListView
                 android:layout_marginTop="20sp"
-                android:id="@+id/listView1"
+                android:id="@+id/listView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -196,6 +194,6 @@
         </LinearLayout>
 
 
-    </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>
